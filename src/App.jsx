@@ -57,8 +57,10 @@ function App() {
 
   function click(key){
     let temp = [...val]
-    temp[key-1].label === " " ? temp[key-1].label = input : null
-    input === "X" ? setInput("O") : setInput("X")
+    if(temp[key-1].label === " ") {
+      temp[key-1].label = input
+      input === "X" ? setInput("O") : setInput("X")
+    }
     setVal(temp)
     checkWinner()
   }
