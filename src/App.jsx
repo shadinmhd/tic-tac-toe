@@ -8,7 +8,7 @@ function App() {
   { play? (
     <Game play={play} setplay={setplay} />
   ) : (
-    <h1>Some one One</h1>
+    <h1>Some one Won</h1>
   )}
   </>)
 }
