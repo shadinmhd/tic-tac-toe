@@ -13,7 +13,6 @@ function Game(prop) {
         {key : 8, label : " "},
         {key : 9, label : " "}
       ])
-      const [input, setInput] = useState("X")
     
       function checkWinner(){
         if(prop.play){
@@ -55,8 +54,8 @@ function Game(prop) {
       function click(key){
         let temp = [...val]
         if(temp[key-1].label === " ") {
-          temp[key-1].label = input
-          input === "X" ? setInput("O") : setInput("X")
+          temp[key-1].label = prop.input
+          prop.input === "X" ? prop.setInput("O") : prop.setInput("X")
         }
         setVal(temp)
         checkWinner()
