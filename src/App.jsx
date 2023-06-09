@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import './App.css'
 import Game from './components/Game'
-import Taskbar from './components/Taskbar'
 
 function App() {
   const [play, setplay] = useState(true)
